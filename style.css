@@ -1,0 +1,54 @@
+#color-box {
+    background-color: rgb(0, 0, 0);
+    width: 20em;
+    height: 20em;
+    margin-top: 2em;
+    position: relative;
+    padding: 5px;
+}
+
+#color-box::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px dashed black;
+    animation: marquee 0.5s linear infinite;
+}
+
+/*added a flashing dotted-border animation with slight help from Google Gemini*/
+@keyframes marquee {
+    0% {
+        border-color: transparent;
+        border-width: 5px;
+    }
+    50% {
+        border-color: black;
+        border-width: 5px;
+    }
+    100% {
+        border-color: transparent;
+        border-width: 5px;
+    }
+}
+
+.picker-control {
+    display: block;
+    margin-top: 10px;
+}
+
+#redVal,
+#greenVal,
+#blueVal {
+    height: 05em;
+    width: 05em;
+    padding: 01px;
+    border: 2px solid black;
+    border-radius: 15%;
+    background-color: rgb(24, 194, 198);
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Monospace, Verdana, Times New Roman, serif;
+}
